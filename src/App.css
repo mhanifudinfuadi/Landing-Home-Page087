@@ -1,0 +1,7 @@
+/* GALAXIA·21 — global canvas helpers */
+.cosmic-canvas-wrap {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
