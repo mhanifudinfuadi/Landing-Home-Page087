@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 const CHANNELS = [
     { name: "MADU SPORT", jp: "スポーツ", url: "https://madusport087.vercel.app/", desc: "Dokumentasi olahraga & pertandingan.", testid: "channel-card-sport" },
     { name: "MADU LAYANAN", jp: "奉仕", url: "https://kegiatan-pelayanan-madu.vercel.app/", desc: "Kegiatan Pelayanan dan Penyuluhan.", testid: "channel-card-layanan" },
-    { name: "MADU ACTIVITY", jp: "活動", url: "https://kegiatan-pelayanan-madu.vercel.app/", desc: "Dokumentasi aktivitas & acara.", testid: "channel-card-activity" },
+    { name: "MADU ACTIVITY", jp: "活動", url: "https://kegiatan-internal-kantor087.vercel.app/", desc: "Dokumentasi aktivitas & acara.", testid: "channel-card-activity" },
     { name: "MADU INFO", jp: "情報", url: "https://info-pelayanan087.vercel.app/", desc: "Informasi & pengumuman pelayanan terbaru.", testid: "channel-card-info" },
 ];
 
