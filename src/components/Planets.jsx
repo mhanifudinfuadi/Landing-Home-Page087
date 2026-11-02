@@ -166,8 +166,7 @@ export default function Planets() {
                     "Setiap cahaya memiliki terangnya, Tentang jiwa riuh yang akhirnya luluh, dan hati teduh yang merapikan jalannya. Dua energi yang berbeda, namun sempurna saat searah."
                 </p>
                 <p className="mt-3 inline-block rounded-lg border border-[#E8C68E]/25 bg-[#E8C68E]/8 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[#E8C68E]">
-                    Kisah-kisah ini puisi, bukan diagnosis — cermin untuk berkaca, bukan kotak untuk membatasi.
-                </p>
+                    Kisah-kisah ini cuma puisi, bukan diagnosis. Siapa tahu ada yang terasa dekat, tapi nggak perlu dianggap terlalu serius, ya.
             </Reveal>
 
             <div className="mt-12 grid grid-cols-12 gap-5 md:gap-6">
