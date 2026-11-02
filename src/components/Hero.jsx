@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowDown, Heart, Sparkles } from "lucide-react";
 
 const LINES = [
-    { text: "EVERY HEART HAS AN ORBIT.", cls: "text-slate-100" },
-    { text: "EVERY SOUL HAS A LIGHT.", cls: "aurora-text" },
-    { text: "DISCOVER WHO YOU ARE.", cls: "text-slate-100" },
+    { text: "EVERY HEART HAS AN ORBIT", cls: "text-slate-100 whitespace-nowrap" },
+    { text: "EVERY SOUL HAS A LIGHT", cls: "aurora-text" },
+    { text: "DISCOVER WHO YOU ARE", cls: "text-slate-100" },
 ];
 
 export default function Hero() {
@@ -18,19 +18,25 @@ export default function Hero() {
                 data-testid="hero-badge"
             >
                 <Heart className="h-3.5 w-3.5" />
-                Dua Bintang · Satu Langit — Eksplorasi Diri
+                sembilan Bintang · Satu Langit — Eksplore your planet
             </motion.div>
 
             <h1 className="text-center font-display font-extrabold leading-[1.02] tracking-tight text-3xl sm:text-5xl lg:text-6xl max-w-5xl">
                 {LINES.map((line, i) => (
-                    <span key={line.text} className="block overflow-hidden pb-1">
+                    <span key={line.text} className="block overflow-hidden pb-4">
                         <motion.span
-                            className={`block ${line.cls}`}
+                            className={`block py-1 ${line.cls}`}
                             initial={{ y: "115%" }}
                             animate={{ y: "0%" }}
                             transition={{ duration: 1.05, delay: 0.45 + i * 0.16, ease: [0.22, 1, 0.36, 1] }}
                         >
-                            {line.text}
+{line.text.split(/(HEART|YOU ARE)/).map((part, j) =>
+                            part === "HEART" || part === "YOU ARE" ? (
+                                <span key={j} className="text-pink-400">{part}</span>
+                            ) : (
+                                part
+                            )
+                        )}
                         </motion.span>
                     </span>
                 ))}
@@ -42,8 +48,7 @@ export default function Hero() {
                 transition={{ duration: 0.9, delay: 1.15 }}
                 className="mt-8 max-w-2xl text-center text-sm sm:text-base leading-relaxed text-slate-400"
             >
-                Di antara sembilan cahaya ini ada satu yang berdenyut dengan ritmemu. Mars dan Venus —
-                sang pejuang dan sang kekasih — akan menunjukkan jalan.
+               Di antara sembilan cahaya, ada satu yang diam-diam punya irama serupa denganmu. Ikuti jejak sang pemberani dan sang pemikat, mungkin di sanalah planetmu menunggu untuk ditemukan.
             </motion.p>
 
             <motion.div

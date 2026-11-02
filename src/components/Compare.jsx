@@ -53,10 +53,10 @@ export default function Compare() {
             <Reveal>
                 <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan-300">04 — Dua Orbit 比較</p>
                 <h2 className="mt-4 font-display text-2xl sm:text-3xl lg:text-4xl font-800 tracking-tight text-slate-100">
-                    Dua orbit tak pernah bertabrakan — <span className="aurora-text">mereka saling menunggu.</span>
+                    Dua orbit tak pernah bertabrakan <br /><span className="aurora-text">mereka saling menunggu.</span>
                 </h2>
                 <p className="mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-slate-400">
-                    Tidak ada cahaya yang lebih tinggi. Hanya cara mencintai yang berbeda, saling menggenapkan.
+                    Tidak ada cahaya yang lebih terang atau lebih tinggi. Hanya cara <br />merawatnya yang berbeda untuk saling menggenapkan.
                 </p>
             </Reveal>
 
@@ -72,11 +72,9 @@ export default function Compare() {
                         <Column p={b} />
                     </div>
                     <div className="mt-6 rounded-2xl border border-[#BCAEFF]/20 bg-[#BCAEFF]/6 p-6" data-testid="compare-complement">
-                        <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-cyan-300">Cara mereka saling menggenapkan</p>
+                        <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-cyan-300">Cara mereka saling mengharmonisasi</p>
                         <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-300">
-                            {a.name} membawa {GIFTS[a.id].gift}; {b.name} membawa {GIFTS[b.id].gift}.
-                            Saat keduanya berbagi langit, satu melihat lewat {GIFTS[a.id].lensa},
-                            satu lagi lewat {GIFTS[b.id].lensa} — dan cinta menjadi utuh.
+                            Sang pembawa pesona mengajarkan arti kelembutan, sementara sang penjaga bara mengingatkan kita akan indahnya keteguhan. Dua jiwa dengan caranya masing-masing, yang pada akhirnya menemukan harmoni dalam perbedaan—sebab tak semua yang berbeda ditakdirkan untuk saling menjauh.
                         </p>
                     </div>
                 </div>

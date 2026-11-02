@@ -114,7 +114,7 @@ export default function Scanner() {
             <Reveal>
                 <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan-300">02 — Orbit Scanner 走査</p>
                 <h2 className="mt-4 max-w-2xl font-display text-2xl sm:text-3xl lg:text-4xl font-800 tracking-tight text-slate-100">
-                    Tangkap cahayanya <span className="aurora-text">sebelum ia berlalu.</span>
+                    Tangkap cahayanya <br /><span className="aurora-text">sebelum ia berlalu.</span>
                 </h2>
             </Reveal>
 

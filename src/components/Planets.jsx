@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Star, X } from "lucide-react";
+import { ArrowRight, Droplets, Star, Sword, X } from "lucide-react";
 import { PLANETS } from "@/data/planets";
 import { useMissions } from "@/context/MissionContext";
 import { Reveal } from "@/components/Reveal";
@@ -35,9 +35,13 @@ const PlanetCard = ({ planet, onOpen, delay }) => {
             }`}
         >
             {planet.star && (
-                <span className="absolute top-5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full border border-[#BCAEFF]/40 bg-[#BCAEFF]/10 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.22em] text-[#BCAEFF]" data-testid={`star-badge-${planet.id}`}>
-                    <Star className="h-3 w-3 fill-current" />
-                    Bintang Utama
+                <span className={`absolute top-5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.22em] ${
+                    planet.id === "mars"
+                        ? "border-[#D95F4C]/40 bg-[#D95F4C]/10 text-[#F0A08A]"
+                        : "border-[#BCAEFF]/40 bg-[#BCAEFF]/10 text-[#BCAEFF]"
+                }`} data-testid={`star-badge-${planet.id}`}>
+                    {planet.id === "mars" ? <Sword className="h-3 w-3" /> : planet.id === "venus" ? <Droplets className="h-3 w-3" /> : <Star className="h-3 w-3 fill-current" />}
+                    {planet.id === "mars" ? "Scorched Iron" : planet.id === "venus" ? "Quenching Waters" : "Bintang Utama"}
                 </span>
             )}
             <span className="absolute top-5 right-6 font-display text-2xl sm:text-3xl font-800 text-white/12 transition-colors duration-500 group-hover:text-white/25" aria-hidden="true">
@@ -156,10 +160,10 @@ export default function Planets() {
             <Reveal>
                 <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan-300">01 — Sembilan Cahaya 惑星</p>
                 <h2 className="mt-4 max-w-2xl font-display text-2xl sm:text-3xl lg:text-4xl font-800 tracking-tight text-slate-100">
-                    Setiap planet adalah <span className="aurora-text">cara jiwa mencintai dunia.</span>
+                    Setiap planet adalah <br /><span className="aurora-text">cara jiwa mencintai dunia.</span>
                 </h2>
                 <p className="mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-slate-400">
-                    Klik cahaya mana pun untuk mendengar kisahnya. Mars dan Venus menunggumu paling depan — dua bintang utama langit ini.
+                    "Setiap cahaya memiliki terangnya, Tentang jiwa riuh yang akhirnya luluh, dan hati teduh yang merapikan jalannya. Dua energi yang berbeda, namun sempurna saat searah."
                 </p>
                 <p className="mt-3 inline-block rounded-lg border border-[#E8C68E]/25 bg-[#E8C68E]/8 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[#E8C68E]">
                     Kisah-kisah ini puisi, bukan diagnosis — cermin untuk berkaca, bukan kotak untuk membatasi.

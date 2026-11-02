@@ -149,7 +149,7 @@ export default function Quiz() {
             <Reveal>
                 <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan-300">03 — Temukan Planetmu 発見</p>
                 <h2 className="mt-4 font-display text-2xl sm:text-3xl lg:text-4xl font-800 tracking-tight text-slate-100">
-                    Lima belas pertanyaan, <span className="aurora-text">satu jawaban di dadamu.</span>
+                    Lima belas pertanyaan, <br /><span className="aurora-text">satu jawaban di dadamu.</span>
                 </h2>
                 <p className="mt-5 max-w-xl text-sm sm:text-base leading-relaxed text-slate-400">
                     Jawablah dengan jujur — bukan yang paling baik, melainkan yang paling kamu.

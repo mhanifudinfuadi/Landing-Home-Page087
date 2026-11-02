@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 
 const CHANNELS = [
     { name: "MADU SPORT", jp: "スポーツ", url: "https://madusport087.vercel.app/", desc: "Dokumentasi olahraga & pertandingan.", testid: "channel-card-sport" },
-    { name: "MADU LAYANAN", jp: "奉仕", url: "https://kegiatan-pelayanan-madu.vercel.app/", desc: "Kegiatan internal kantor & pelayanan harian.", testid: "channel-card-layanan" },
+    { name: "MADU LAYANAN", jp: "奉仕", url: "https://kegiatan-pelayanan-madu.vercel.app/", desc: "Kegiatan Pelayanan dan Penyuluhan.", testid: "channel-card-layanan" },
     { name: "MADU ACTIVITY", jp: "活動", url: "https://kegiatan-pelayanan-madu.vercel.app/", desc: "Dokumentasi aktivitas & acara.", testid: "channel-card-activity" },
     { name: "MADU INFO", jp: "情報", url: "https://info-pelayanan087.vercel.app/", desc: "Informasi & pengumuman pelayanan terbaru.", testid: "channel-card-info" },
 ];
@@ -37,10 +37,11 @@ export default function MaduGate() {
                             Tiga Perjalanan — {doneCount}/3 selesai
                         </p>
                         {missions.map((m, i) => (
-                            <div
+<div
                                 key={m.id}
                                 data-testid={`mission-row-${m.id}`}
-                                className={`liquid-border flex items-center gap-4 rounded-2xl border px-5 py-4 transition-all duration-300 ${
+                                onClick={() => document.getElementById(m.id)?.scrollIntoView({ behavior: "smooth" })}
+                                className={`liquid-border flex items-center gap-4 rounded-2xl border px-5 py-4 transition-all duration-300 cursor-pointer ${
                                     m.done ? "border-emerald-400/30 bg-emerald-400/6" : "border-white/8 bg-white/[0.02]"
                                 }`}
                             >
@@ -76,8 +77,8 @@ export default function MaduGate() {
                                     </span>
                                 )}
                                 <div className="mt-10">
-                                    <h3 className="font-display text-xl sm:text-2xl font-800 tracking-tight text-slate-100">{c.name}</h3>
-                                    <p className="mt-2 text-sm leading-relaxed text-slate-400">{c.desc}</p>
+                                    <h3 className="font-display text-xl sm:text-2xl font-800 tracking-tight text-pink-400">{c.name}</h3>
+                                    <p className="mt-2 text-sm leading-relaxed text-blue-400">{c.desc}</p>
                                 </div>
                                 <span className="mt-6 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-[#BCAEFF]">
                                     {locked ? "Selesaikan misi" : "Masuk Kanal"}
