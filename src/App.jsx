@@ -40,17 +40,16 @@ function App() {
         if (!audioRef.current) {
             const audio = new window.Audio("/assets/audio/wahdana.mp3");
             audio.loop = true;
-            audio.volume = 0.2; // medium-low volume
-            audio.autoplay = true;
-            // Attempt to play on load
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                    // Most browsers allow autoplay if muted
-                    audio.muted = true;
-                    audio.play();
-                });
-            }
+            audio.volume = 0.2;
+            audio.muted = true;
+            audio.play().catch(() => {});
+            const unmute = () => {
+                audio.muted = false;
+                audio.play().catch(() => {});
+            };
+            window.addEventListener("click", unmute, { once: true });
+            window.addEventListener("touchstart", unmute, { once: true });
+            window.addEventListener("scroll", unmute, { once: true });
             audioRef.current = audio;
         }
         return () => {
