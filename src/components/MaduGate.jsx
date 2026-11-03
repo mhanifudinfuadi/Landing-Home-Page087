@@ -40,7 +40,10 @@ export default function MaduGate() {
 <div
                                 key={m.id}
                                 data-testid={`mission-row-${m.id}`}
-                                onClick={() => document.getElementById(m.id)?.scrollIntoView({ behavior: "smooth" })}
+                                onClick={() => {
+                                    const targetId = m.id === "quiz" ? "kuis" : m.id;
+                                    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+                                }}
                                 className={`liquid-border flex items-center gap-4 rounded-2xl border px-5 py-4 transition-all duration-300 cursor-pointer ${
                                     m.done ? "border-emerald-400/30 bg-emerald-400/6" : "border-white/8 bg-white/[0.02]"
                                 }`}
