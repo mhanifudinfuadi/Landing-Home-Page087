@@ -21,7 +21,7 @@ export default function Hero() {
                 sembilan Bintang · Satu Langit — Eksplore your planet
             </motion.div>
 
-            <h1 className="text-center font-display font-extrabold leading-[1.02] tracking-tight text-3xl sm:text-5xl lg:text-6xl max-w-5xl">
+            <h1 className="w-full text-center font-display font-extrabold leading-[1.02] tracking-tight text-[clamp(0.85rem,4.15vw,3.4rem)] max-w-5xl">
                 {LINES.map((line, i) => (
                     <span key={line.text} className="block overflow-hidden pb-6">
                         <motion.span
