@@ -23,9 +23,9 @@ export default function Hero() {
 
             <h1 className="text-center font-display font-extrabold leading-[1.02] tracking-tight text-3xl sm:text-5xl lg:text-6xl max-w-5xl">
                 {LINES.map((line, i) => (
-                    <span key={line.text} className="block overflow-hidden pb-4">
+                    <span key={line.text} className="block overflow-hidden pb-6">
                         <motion.span
-                            className={`block py-1 ${line.cls}`}
+                            className={`block py-2 ${line.cls}`}
                             initial={{ y: "115%" }}
                             animate={{ y: "0%" }}
                             transition={{ duration: 1.05, delay: 0.45 + i * 0.16, ease: [0.22, 1, 0.36, 1] }}
